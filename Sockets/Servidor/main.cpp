@@ -33,7 +33,7 @@ si((socketServidor = CreaSocket(AF_INET, SOCK_STREAM, 0)) >= 0) entonces // Crea
                 mostrar << "Escuchando...\n";
                 si((socketNuevo = acepta(socketServidor, (DireccionSocket *)&direccion, (socklen_t*)&longitudDireccion))>=0) entonces 
                     mostrar << "Servidor escuchando...\n";
-                    valread = read( socketNuevo , buffer, TAMBUFFER); 
+                    valread = leeSocket( socketNuevo , buffer, TAMBUFFER); 
                     printf("%s\n",buffer ); 
                     send(socketNuevo , &deQuien[0] , tamanioDe(deQuien) , 0 ); 
                     printf("Enviado...\n"); 
