@@ -1,1 +1,0 @@
-/home/carlos/.Zinjai/program1.h
